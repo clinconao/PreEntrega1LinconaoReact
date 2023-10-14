@@ -2,7 +2,7 @@
 const CartWidget = () => {
   return (
     <div>
-       2 🛒
+      2 🛒
     </div>
   )
 }
