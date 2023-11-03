@@ -13,7 +13,7 @@ export const NavBar = () => {
       <nav>
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container fluid>
-            <Navbqar.Brand href="#">World-KpopTemuco</Navbqar.Brand>
+            <Navbar.Brand href="#">World-KpopTemuco</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
