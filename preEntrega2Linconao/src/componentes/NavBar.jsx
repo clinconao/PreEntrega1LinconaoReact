@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 export const NavBar = () => {
@@ -22,37 +22,43 @@ export const NavBar = () => {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
               >
-                <Link to="/home">Home</Link>
-                <Nav.Link href="#action2">Nosotros</Nav.Link>
+                <NavLink className={({isActive})=> isActive? 'btn btn-primary' : 'btn'} to="/home">
+                  Home
+                </NavLink>
+                <NavLink className={({isActive})=> isActive? 'btn btn-primary' : 'btn'} to="/about">
+                  Nosotros
+                </NavLink>
                 <NavDropdown title="Tienda" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action3">Album</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
+                  <NavLink className={({isActive})=> isActive? 'btn btn-primary' : 'btn'} to="/category/album">
+                    Album
+                  </NavLink>
+                  <NavLink className={({isActive})=> isActive? 'btn btn-primary' : 'btn'} to="/category/photocard">
                     Photocard
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action5">
+                  </NavLink>
+                  <NavLink className={({isActive})=> isActive? 'btn btn-primary' : 'btn'} to="/category/photobook">
                     Photobook
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action6">
+                  </NavLink>
+                  <NavLink className={({isActive})=> isActive? 'btn btn-primary' : 'btn'} to="/category/papeleria">
                     Papeleria
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action7">
+                  </NavLink>
+                  <NavLink className={({isActive})=> isActive? 'btn btn-primary' : 'btn'} to="/category/accesorios">
                     Accesorios
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action8">
+                  </NavLink>
+                  <NavLink className={({isActive})=> isActive? 'btn btn-primary' : 'btn'} to="/category/fanmode">
                     FanMode
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action8">
+                  </NavLink>
+                  <NavLink className={({isActive})=> isActive? 'btn btn-primary' : 'btn'} to="/category/kfood">
                     K-Food
-                  </NavDropdown.Item>
+                  </NavLink>
                 </NavDropdown>
-                <Nav.Link href="#">
+                <NavLink className={({isActive})=> isActive? 'btn btn-primary' : 'btn'} to="/ubicacion">
                   Ubicacion
-                </Nav.Link>
+                </NavLink>
               </Nav>
-              <Link>
+              <NavLink className={({isActive})=> isActive? 'btn btn-primary' : 'btn'}>
                 {/* carrito */}
                 <CartWidget />
-              </Link>
+              </NavLink>
                 
               <Form className="d-flex">
                 <Form.Control

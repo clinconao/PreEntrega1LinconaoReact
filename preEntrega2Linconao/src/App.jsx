@@ -16,6 +16,8 @@ function App() {
         <NavBar />
       <Routes>
         <Route path='/' element={<ItemListContainer greeting='Tu tienda del sur' />} />
+        <Route path='/category/:cid' element={<ItemListContainer greeting='Tu tienda del sur' />} />
+
         <Route path='/detail/:pid' element={<ItemDetailContainer />} />
         <Route path='/formulario' element={<Formulario />} />
 

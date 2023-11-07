@@ -9,12 +9,21 @@ import ItemDetail from "./ItemDetail"
 export const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
     const { pid } = useParams()
+    const { cid } = useParams()
 
     useEffect(() => {
-        mFetchId(pid)
-        .then(result=>setProduct(result))
+        if (cid) {
+            mFetch()
+            .then(resultado => setProducts(resultado.filter(product => product.category === cid)))
+            .catch(error=>console.log(error))
+            .finally(()=> setLoading(false))
+        }else{
+        mFetchId()
+        .then(resultado=>setProducts(resultado))
         .catch(error=>console.log(error))
-    })
+        .finally(() =>setLoading(false  ))
+    }
+    }, [cid])
 
 
     return (
