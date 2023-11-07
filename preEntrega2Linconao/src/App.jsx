@@ -1,23 +1,27 @@
+import { BrowserRouter, Navigate, Route, Router, Routes } from 'react-router-dom';
+
 import ItemListContainer from './componentes/ItemListContainer'
 import NavBar from './componentes/NavBar';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from './componentes/ItemCount';
 import Formulario from './componentes/Formulario';
-import { BrowserRouter } from 'react-router-dom';
+import { ItemDetailContainer } from './componentes/ItemDetailContainer';
 
-const onAdd = cant => {
-  console.log('Cantidad seleccionada: ', cant)
-}
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
 
   return (
-    <>
-      <NavBar />
-      <ItemListContainer greeting='Tu tienda del sur' />
-      <ItemCount initial={1} stock={5} onAdd={onAdd}/>
-      <Formulario/>
-      </> 
+    <Router>
+        <NavBar />
+      <Routes>
+        <Route path='/' element={<ItemListContainer greeting='Tu tienda del sur' />} />
+        <Route path='/detail/:pid' element={<ItemDetailContainer />} />
+        <Route path='/formulario' element={<Formulario />} />
+
+        <Route path='*' element={<Navigate to='/'/>} />
+      </Routes>
+    </Router>
   )
 }
 

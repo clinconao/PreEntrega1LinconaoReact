@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
 
 export const NavBar = () => {
@@ -21,7 +22,7 @@ export const NavBar = () => {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
               >
-                <Nav.Link href="#action1">Home</Nav.Link>
+                <Link to="/home">Home</Link>
                 <Nav.Link href="#action2">Nosotros</Nav.Link>
                 <NavDropdown title="Tienda" id="navbarScrollingDropdown">
                   <NavDropdown.Item href="#action3">Album</NavDropdown.Item>
@@ -48,9 +49,10 @@ export const NavBar = () => {
                   Ubicacion
                 </Nav.Link>
               </Nav>
-
+              <Link>
                 {/* carrito */}
                 <CartWidget />
+              </Link>
                 
               <Form className="d-flex">
                 <Form.Control
