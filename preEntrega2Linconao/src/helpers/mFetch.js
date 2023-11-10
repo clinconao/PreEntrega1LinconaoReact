@@ -74,14 +74,14 @@ export const mFetch = (id) =>{
     return new Promise((resolve, reject) => {
         setTimeout(()=>{
             resolve(id ? products.find(prod => prod.id === id) :products)
-        },2000)
+        },500)
     })
 }
 
-// export const mFetchOne = (id) => {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(()=>{
-//             resolve(products.find(prod => prod.id ===id))
-//         }, 500)
-//     })
-// }
+export const mFetchOne = (id) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            resolve(products.find(prod => prod.id ===id))
+        }, 500)
+    })
+}
