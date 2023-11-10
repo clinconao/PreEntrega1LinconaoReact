@@ -8,10 +8,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link, NavLink } from 'react-router-dom';
 
 
-export const NavBar = () => {
+function NavBar () {
   return (
     <>
-      <nav>
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container fluid>
             <Navbar.Brand href="#">World-KpopTemuco</Navbar.Brand>
@@ -72,7 +71,6 @@ export const NavBar = () => {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-      </nav>
     </>
   )
 }

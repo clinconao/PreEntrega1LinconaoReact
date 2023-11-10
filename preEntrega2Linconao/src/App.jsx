@@ -12,18 +12,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   return (
-    <Router>
+    <div>
+      <Router>
         <NavBar />
-      <Routes>
-        <Route path='/' element={<ItemListContainer greeting='Tu tienda del sur' />} />
-        <Route path='/category/:cid' element={<ItemListContainer greeting='Tu tienda del sur' />} />
+        <Routes>
+          <Route path='/' element={<ItemListContainer greeting='Tu tienda del sur' />} />
+          <Route path='/category/:cid' element={<ItemListContainer greeting='Tu tienda del sur' />} />
+          <Route path='/detail/:pid' element={<ItemDetailContainer />} />
+          {/* <Route path='/formulario' element={<Formulario />} /> */}
 
-        <Route path='/detail/:pid' element={<ItemDetailContainer />} />
-        <Route path='/formulario' element={<Formulario />} />
-
-        <Route path='*' element={<Navigate to='/'/>} />
-      </Routes>
-    </Router>
+          <Route path='*' element={<Navigate to='/' />} />
+        </Routes>
+      </Router>
+    </div>
   )
 }
 

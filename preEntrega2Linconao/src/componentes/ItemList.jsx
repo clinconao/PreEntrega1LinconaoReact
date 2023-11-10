@@ -1,6 +1,7 @@
 import { Filter } from "./Filter"
 import { Item } from "./Item"
 
+
 // const productFiltered = ({products, filterState, handleFilterChange}) => (
 //     <>
 //         <div className="">
@@ -47,8 +48,15 @@ import { Item } from "./Item"
 //     </>
 // )
 
-export const ItemList = ({products}) => {
-  return (
-    products.map(product =><Item product={product} key={product.id}/>)
-  )
+export const ItemList = ({ products }) => {
+    return (
+        <div className="container mt-3" style={{
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap'
+        }}>
+            {products.map(product => <Item key={product.id} product={product} />)}
+        </div>
+
+    )
 }

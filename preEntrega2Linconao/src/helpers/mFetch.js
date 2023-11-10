@@ -70,7 +70,7 @@ const products = [
     },
 
 ]
-const mFetch = (id) =>{
+export const mFetch = (id) =>{
     return new Promise((resolve, reject) => {
         setTimeout(()=>{
             resolve(id ? products.find(prod => prod.id === id) :products)
@@ -78,19 +78,10 @@ const mFetch = (id) =>{
     })
 }
 
-export const mFetchId = (id) => {
-    return new Promise((resolve, reject) => {
-        
-        const item = products.find((el) => el.id ===id);
-
-        if (item) {
-            resolve(item)
-        } else {
-            reject({
-                error: "Producto no encontrado"
-            })
-        }
-    })
-}
-
-export default mFetch
+// export const mFetchOne = (id) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(()=>{
+//             resolve(products.find(prod => prod.id ===id))
+//         }, 500)
+//     })
+// }
