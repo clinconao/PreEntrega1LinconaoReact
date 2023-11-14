@@ -9,6 +9,7 @@ import { mFetch } from "../helpers/mFetch"
 export const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
     const { pid } = useParams()
+    
 
     useEffect(() => {
             mFetch(pid)

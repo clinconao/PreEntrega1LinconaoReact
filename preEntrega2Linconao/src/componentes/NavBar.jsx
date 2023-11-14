@@ -59,15 +59,7 @@ function NavBar () {
                 <CartWidget />
               </NavLink>
                 
-              <Form className="d-flex">
-                <Form.Control
-                  type="search"
-                  placeholder="Busqueda"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success">Buscar</Button>
-              </Form>
+
             </Navbar.Collapse>
           </Container>
         </Navbar>

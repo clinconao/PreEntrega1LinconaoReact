@@ -3,6 +3,9 @@ import ItemCounter from "./ItemCount"
 
 const ItemDetail = ({product}) => {
 
+    const agregarAlCarrito = (producto) => {
+        console.log("Se agregó el producto al carrito", producto);
+    };
     const onAdd = cant => {
         console.log('cantidad seleccionada', cant)
         agregarAlCarrito({...product, cant})

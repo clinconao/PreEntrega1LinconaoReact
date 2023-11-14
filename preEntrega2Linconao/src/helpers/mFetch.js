@@ -6,7 +6,7 @@ const products = [
         price: 1000, 
         stock: 500, 
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.', 
-        imageUrl: './assets/photo01.jpg'
+        imageUrl: '/assets/photo01.jpg'
     },
 
     {
@@ -16,7 +16,7 @@ const products = [
         price: 1000, 
         stock: 500, 
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.', 
-        imageUrl: './assets/photo02.jpg'
+        imageUrl: '/assets/photo02.jpg'
     },
 
     {
@@ -26,7 +26,7 @@ const products = [
         price: 1000, 
         stock: 500, 
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.', 
-        imageUrl: './assets/photo03.jpg'
+        imageUrl: '/assets/photo03.jpg'
     },
 
     {
@@ -36,7 +36,7 @@ const products = [
         price: 1000, 
         stock: 500, 
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.', 
-        imageUrl: './assets/photo04.jpg'
+        imageUrl: '/assets/photo04.jpg'
     },
 
     {
@@ -46,7 +46,7 @@ const products = [
         price: 1000, 
         stock: 500, 
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.', 
-        imageUrl: './assets/photo05.jpg'
+        imageUrl: '/assets/photo05.jpg'
     },
 
     {
@@ -56,7 +56,7 @@ const products = [
         price: 1000, 
         stock: 500, 
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.', 
-        imageUrl: './assets/photo06.jpg'
+        imageUrl: '/assets/photo06.jpg'
     },
 
     {
@@ -66,7 +66,7 @@ const products = [
         price: 1000, 
         stock: 500, 
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.', 
-        imageUrl: './assets/photo07.jpg'
+        imageUrl: '/assets/photo07.jpg'
     },
 
 ]
