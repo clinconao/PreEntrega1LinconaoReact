@@ -74,7 +74,7 @@ export const mFetch = (id) =>{
     return new Promise((resolve, reject) => {
         setTimeout(()=>{
             resolve(id ? products.find(prod => prod.id === id) :products)
-        },500)
+        },1000)
     })
 }
 
