@@ -9,7 +9,7 @@ const ItemDetail = ({ product }) => {
     const { agregarAlCarrito } = useCartContext()
 
     const onAdd = cant => {
-/*         console.log('cantidad seleccionada', cant) */
+
         agregarAlCarrito({ ...product, cant })
         setIsCount(false)
     }
@@ -17,13 +17,14 @@ const ItemDetail = ({ product }) => {
 
 
     return (
-        <div className="container row">
+        <div className="container">
             <div className="detalle-producto col-6 mt-5">
                 <img src={product.imageUrl} alt={product.name} className="img-fluid" />
                 <div>
                     <h3 className="name">Nombre:{product.name}</h3>
                     <p className="category">Categoria: {product.category}</p>
                     <p className="price">${product.price}</p>
+                    <p className="description">Descripcion: {product.description}</p>
                     {
                         isCount ?
                             <ItemCounter initial={1} stock={5} onAdd={onAdd} />

@@ -14,8 +14,6 @@ export const CartContainer = () => {
         email: ''
     });
 
-
-
     const handleOrders = (evt) => {
         evt.preventDefault()
         const order = {}
@@ -82,22 +80,22 @@ export const CartContainer = () => {
 
                             <br />
                             <form onSubmit={handleOrders} className="text-center form-control">
-                                <label placeholder="Escribe tu nombre">
-                                    Ingresar nombre
+                                <label>
+                                    Nombre
                                 </label>
-                                <input className="form-control" type="text" name="name" required onChange={handleOnChange} value={formData.name} />
+                                <input className="form-control" type="text" name="name" required onChange={handleOnChange} value={formData.name} placeholder="Escribe tu nombre" />
 
-                                <label placeholder="Telefono">
-                                    Ingresar Telefono
+                                <label >
+                                    Telefono
                                 </label>
-                                <input className="form-control" type="number" name="phone" required onChange={handleOnChange} value={formData.phone} />
+                                <input className="form-control" type="number" name="phone" required onChange={handleOnChange} value={formData.phone} placeholder="Ingresa tu Telefono" />
 
-                                <label placeholder="Escribe tu email">
+                                <label>
                                     Ingresar Email
                                 </label>
-                                <input className="form-control" type="email" name="email" required onChange={handleOnChange} value={formData.email} />
+                                <input className="form-control" type="email" name="email" required onChange={handleOnChange} value={formData.email} placeholder="Escribe tu email" />
 
-                                <button className="btn btn-outline-success" onClick={handleOrders}>
+                                <button className="btn btn-oqutline-success" onClick={handleOrders}>
                                     Proceder al pago
                                 </button>
                             </form>

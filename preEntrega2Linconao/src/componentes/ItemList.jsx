@@ -10,7 +10,9 @@ export const ItemList = ({ products }) => {
             flexDirection: 'row',
             flexWrap: 'wrap'
         }}>
-            {products.map(product => <Item key={product.id} product={product} />)}
+            {products.map(product =>
+                <Item key={product.id} product={product} />
+            )}
         </div>
     )
 }
