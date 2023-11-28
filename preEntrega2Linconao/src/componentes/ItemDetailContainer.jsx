@@ -3,14 +3,14 @@ import { useParams } from "react-router-dom"
 import { doc, getDoc, getFirestore } from "firebase/firestore"
 
 import ItemDetail from "./ItemDetail"
-import { useCartContext } from "./context/CartContext"
+import { Loading } from "./Loading"
 
 
 
 export const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
     const { pid } = useParams()
-    const { agregarAlCarrito } = useCartContext()
+    const [ isLoading, setIsLoading] = useState(true)
 
 
 
@@ -22,12 +22,19 @@ export const ItemDetailContainer = () => {
         getDoc(queryDoc)
             .then(res => setProduct({ id: res.id, ...res.data() }))
             .catch(err => console.log(err))
+            .finally(() => setIsLoading (false))
     }, [])
 
 
     return (
         <div>
-            <ItemDetail product={product} />
+            {
+                isLoading ? 
+                <Loading/>
+                :
+                <ItemDetail product={product} />
+            }
+            
         </div>
     )
 }

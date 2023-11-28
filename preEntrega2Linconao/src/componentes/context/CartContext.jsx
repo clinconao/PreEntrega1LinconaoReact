@@ -25,6 +25,9 @@ export const CartContextProvider = ({children}) => {
 
     const totalProducts = () => cartList.reduce((total, product)=> total += product.cant ,0 )
     const totalPrice = () => cartList.reduce((total, productObjet) => total = total + (productObjet.price * productObjet.cant) , 0 )
+    const removeProduct = (pid) => {
+        setCartList(cartList.filter(product => product.id !== pid))
+    }
 
 
     const vaciarCarrito = () =>{
@@ -37,7 +40,8 @@ export const CartContextProvider = ({children}) => {
             agregarAlCarrito,
             vaciarCarrito, 
             totalPrice,
-            totalProducts
+            totalProducts,
+            removeProduct
         }}>
             {children}
         </CartContext.Provider>
