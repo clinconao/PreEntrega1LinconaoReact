@@ -40,6 +40,14 @@
 
 ###
 
+<h2 align="left">Link repositorio en GitHub</h2>
+
+###
+
+<p align="left">https://github.com/clinconao/PreEntrega2LinconaoReact/tree/1ff92e03b286c29e7b0a186d05c0061704073214/preEntrega2Linconao</p>
+
+###
+
 
 | Plugin | README |
 | ------ | ------ |
@@ -57,8 +65,4 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-Link del repositorio en netlify:
-
-https://656323e26234c45c60e421c3--majestic-jalebi-460f4c.netlify.app
 

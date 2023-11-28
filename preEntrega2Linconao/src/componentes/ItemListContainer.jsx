@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom"
 import { ItemList } from "./ItemList"
 import { Loading } from "./Loading";
 
-const ItemListContainer = () => {
+const ItemListContainer = ({ greeting = 'saludando por defecto' }) => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
@@ -27,6 +27,10 @@ const ItemListContainer = () => {
 
     return (
         <>
+        <center>
+            <h1>{greeting}</h1>
+                
+            </center>
             {loading ?
                 <Loading />
                 :
