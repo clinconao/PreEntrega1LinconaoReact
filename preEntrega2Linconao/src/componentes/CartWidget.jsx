@@ -1,8 +1,10 @@
+import { useCartContext } from "./context/CartContext"
 
 const CartWidget = () => {
+  const {totalProducts} = useCartContext()
   return (
     <div>
-      2 🛒
+      {totalProducts() !== 0 && totalProducts()} 🛒
     </div>
   )
 }
