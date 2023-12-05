@@ -95,8 +95,8 @@ export const CartContainer = () => {
                                 </label>
                                 <input className="form-control" type="email" name="email" required onChange={handleOnChange} value={formData.email} placeholder="Escribe tu email" />
 
-                                <button className="btn btn-oqutline-success" onClick={handleOrders}>
-                                    Proceder al pago
+                                <button className="btn btn-outline-success" onClick={handleOrders}>
+                                    Terminar compra
                                 </button>
                             </form>
                         </div>)}
